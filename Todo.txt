@@ -1,0 +1,116 @@
+﻿Grid:
+	. management des deplacements
+		. deplacement via souris lorsque clique droit est enfoncé ✓
+			. corriger un bug en cas de spam de clique gauche ✓
+		. deplacement via les fleches ✗
+	. management du zoom
+		. zoom via mollette ✓
+		. zoom min et zoom max ✓
+	. Sous-Grid qui apparrait a un certain taux de zoom subdivisant chaque carreaux en 10 ✓
+		. opcatiter changer en fonction de si on est sur une sous grille ✓
+	. Aimantation du stylo a la grid ✗
+	. Gerer Plusieur Style de Grid ✗
+	. Donner la possibilité a l'utilisateur d'afficher ou non la grille ✗
+	. Optimiser le rendu de la grid ✗
+		. rendre la transition de transparence plus smooth ✗
+		. reduire le nombre de calcul ✗
+		. eviter de tracer des lignes qui ont deja été tracée ✓
+
+Vecteur Data Storing:
+	Faire un arbre de scene
+		cette arbre vas contenir une liste de noeuds, 
+			chaque noeud representera un object ou groupe d'object
+			il posedera une pos min et pos max representant un rectangle  englobant l'objet et tout ses sous objets
+			un noeud de groupe n'as pas de dimensions propre puisqu'il n'est qu'un groupe 
+				ses dimensions doivent etre mit a jour au fur et a mesure que l'on y ajoute des objets
+			les objets simples sont aussi des deriver de la classe noeud et eux auront des dimension qui leur sont propres
+			il representont les lignes rectangles et autres formes vectoriel "simple"
+
+Noeuds:
+	. doit contenir une fonction pour mettre a jour pos min et pos max
+	. doit contenir des fonction pour ajouter et supprimer des objets a la list de nodes
+		. l'ajout doit updatre min/max si besoin
+		. la suprresion doit update min/max 
+	Noeuds de Lignes:
+		Attributs de positionnement :
+			. x1 : La coordonnée x du point de départ de la ligne.
+			. y1 : La coordonnée y du point de départ de la ligne.
+			. x2 : La coordonnée x du point d'arrivée de la ligne.
+			. y2 : La coordonnée y du point d'arrivée de la ligne.
+		Attributs de style :
+			. stroke : La couleur de la ligne.
+			. stroke-width : L'épaisseur de la ligne.
+			. stroke-opacity : L'opacité de la ligne.
+			. stroke-linecap : La forme des extrémités de la ligne (par exemple, round, square, butt).
+			. stroke-linejoin : La forme des intersections de ligne (par exemple, round, bevel, miter).
+		Autres attributs :
+			. id : L'identifiant unique de la ligne.
+			. class : La classe CSS de la ligne pour le style.
+			. transform : Les transformations appliquées à la ligne (par exemple, translation, rotation, mise à l'échelle)
+
+Class Tools:
+	. Class parent de tout les tools utilisable 
+	Sous classe lignes:
+		. Clique Gauche : commence a tracer la ligne when down et la termine quand up
+		. Clique Droit : Deplace la camera ?
+		. Selecteur de couleur
+	sous classe selecteur:
+		. Clique Gauche : commencer la selection 
+		. clique Droit : ouvrir menu action sur la selection 
+			. Grouping
+			. copy
+			. paste
+	sous classe Form Modification
+		. clique gauche do action
+		. clique droit : ouvrir menu modification
+			. move
+			. resize
+			. rotate
+
+Layer_Manager
+	. manager la possition des layers dans la list presente dans la scene
+	. supprimer un layer
+	. ajouter un layer
+	. ajouter le panneau de calque dans l'UI
+
+Undo_RedoManger
+	. ajouter les boutons dans L'ui
+	Action Possible:
+		. Calques:
+			Ajouter
+			Supprimer
+			Dupliquer
+		. Objets/Groupes
+			Ajouter
+			Supprimer
+			Dupliquer
+
+Culling:
+	Déterminez les coordonnées des extrémités de la ligne.
+	Testez si l'une ou les deux extrémités de la ligne se troSuvent à l'intérieur du volume de visualisation de la caméra (frustum). Si l'une des extrémités est à l'intérieur, cela signifie que la ligne est potentiellement visible.
+	Si aucune des extrémités n'est à l'intérieur du frustum, testez si la ligne intersecte l'un des plans du frustum. Pour cela, vous pouvez utiliser des tests d'intersection géométrique entre la ligne et les plans du frustum.
+	Si la ligne intersecte l'un des plans du frustum, cela signifie qu'elle est potentiellement visible dans le champ de la caméra. 
+
+
+
+UI :
+	. Selecteur de couleur
+	. Zone de calque
+	. Zone de Parametre de la grille
+		Bouton afin de gerer
+			aimantation a la grille
+			style de la grille
+
+
+	Icone a faire:
+		. Slecteur de Couleur
+		. Couleur Selection
+		. Creer un nouveau calque
+		. Supprimer le calque
+		. Deplacer calque vers le haut
+		. Deplacer Calque vers le bas
+		. Undo
+		. Redo
+		. Sauvegarder
+		. Ouvrir
+		. Creer un Nouveau projet
