@@ -17,6 +17,11 @@ namespace VectorDrawing.Classes
 		protected bool IsRightMouseBouttonDown;
 		protected bool IsLeftMouseBouttonDown;
 
+		public Tools()
+		{
+
+		}
+
 		public Camera Camera
 		{ 
 			get { return _camera; }

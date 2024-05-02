@@ -117,6 +117,7 @@ namespace VectorDrawing.Classes
 			tool.Canvas = drawingCanvas.canvas;
 			tool.Camera = camera;
 			tool.DrawingCanvas = drawingCanvas;
+			tool.ConteneurCanvas = this;
 		}
 
 

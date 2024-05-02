@@ -78,7 +78,7 @@
 						</ToolTip>
 					</ToggleButton.ToolTip>
 				</ToggleButton>
-				<ToggleButton Name="Tool_Eraser" Style="{StaticResource ToolButton}">
+				<ToggleButton Name="Tool_Eraser" Style="{StaticResource ToolButton}" Template="{StaticResource ToolButton_Template}">
 					<ToggleButton.Content>
 						<Image Source="{DynamicResource Icon_EraserTool}"/>
 					</ToggleButton.Content>
