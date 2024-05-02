@@ -11,15 +11,21 @@
   <ItemGroup>
     <None Remove="Assets\EraserIcon.png" />
     <None Remove="Assets\LineIcon.png" />
+    <None Remove="Assets\RedoIcon.png" />
     <None Remove="Assets\SelecteurIcon.png" />
+    <None Remove="Assets\UndoIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Assets\EraserIcon.png" />
     <Resource Include="Assets\LineIcon.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\RedoIcon.png" />
     <Resource Include="Assets\SelecteurIcon.png" />
+    <Resource Include="Assets\UndoIcon.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

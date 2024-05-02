@@ -14,7 +14,6 @@ namespace VectorDrawing.Classes
 {
 	internal class Tools_Line : Tools
 	{
-		private ConteneurCanvas conteneur;
 		private double thickness;
 		private Point startPoint;
 		private Nodes_Lines line;
@@ -48,7 +47,7 @@ namespace VectorDrawing.Classes
 			P2 = P1;
 			line = new Nodes_Lines(P1, P2);
 			Active_Layer.Add_Object(line);
-			action = new Action_AddObject(line, DrawingCanvas.ActiveLayer);
+			action = new Action_AddObject(line, DrawingCanvas.ActiveLayer, new DUpdate_Canvas(DrawingCanvas.Draw_Scene));
 		}
 
 		public override void OnLeftMouseButtonDown(object sender, MouseButtonEventArgs e)
@@ -82,7 +81,9 @@ namespace VectorDrawing.Classes
 				point.X = Math.Round(point.X, Camera.deepness - 1);
 				point.Y = Math.Round(point.Y, Camera.deepness - 1);
 				line.P2 = point;
-				DrawingCanvas.Draw_Line(line);
+				//should be optimized by having a tmp bitmap superposed to already drawn things since i don't need to redraw everything
+				//only what im adding 
+				DrawingCanvas.Draw_Scene();
 			}
 		}
 	}

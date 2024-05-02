@@ -55,7 +55,7 @@ namespace VectorDrawing.Classes
 			line = new Nodes_Lines(P1, P2);
 			tmp_Layer.Add_Object(line);
 			actual_Index++;
-			actions.Add(new Action_AddObject(line, DrawingCanvas.ActiveLayer));
+			actions.Add(new Action_AddObject(line, DrawingCanvas.ActiveLayer, new DUpdate_Canvas(ConteneurCanvas.Update_Canvas)));
 		}
 
 		private void Send_Actions()

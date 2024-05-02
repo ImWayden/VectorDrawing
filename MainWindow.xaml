@@ -6,6 +6,10 @@
         xmlns:local="clr-namespace:VectorDrawing"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="775">
+	<Window.InputBindings>
+		<KeyBinding Command="{Binding UndoCommand}" Key="Z" Modifiers="Ctrl"/>
+		<KeyBinding Command="{Binding RedoCommand}" Key="Y" Modifiers="Ctrl"/>
+	</Window.InputBindings>
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<!-- Wrap Panel -->
@@ -44,80 +48,40 @@
 			<!-- Ajoutez d'autres éléments de menu ici -->
 		</Menu>
 		<Border Grid.Row="1" Grid.ColumnSpan="5" BorderBrush="#191919" BorderThickness="1" Background="#272727">
-			<StackPanel Grid.Row="1" Grid.ColumnSpan="6" Height="32" MinHeight="20"  Background="#272727" Orientation="Horizontal" HorizontalAlignment="Left">
+			<ToolBar Name="MyToolBar" Grid.Row="1" Grid.ColumnSpan="6" Height="32" MinHeight="20"  Background="#272727" HorizontalAlignment="Left">
 				<Button Name="UndoButton" Width="32" Height="32" Background="Transparent">
 					<Image Source="Assets/UndoIcon.png" />
 				</Button>
 				<Button Name="RedoButton" Width="32" Height="32" Background="Transparent">
 					<Image Source="Assets/RedoIcon.png" />
 				</Button>
-			</StackPanel>
+			</ToolBar>
 		</Border>
 		<StackPanel Name="ToolBoxPanel" Grid.Row="2" Grid.Column="0" Background="#272727" Grid.ColumnSpan="2" MinWidth="32">
+			<StackPanel.Resources>
+				<Style TargetType="ToggleButton" x:Key="ToolButton">
+					<Setter Property="Width" Value="32"/>
+					<Setter Property="Height" Value="32"/>
+					<Setter Property="Background" Value="Transparent"/>
+					<Setter Property="BorderBrush" Value="Transparent"/>
+				</Style>
+			</StackPanel.Resources>
 			<WrapPanel Grid.Row="2"  MinWidth="32" Background="#272727" Margin="0,15,0,0">
 				<!-- Tool 1 -->
-				<ToggleButton Name="Tool_Line" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
-					<ToggleButton.Style>
-						<Style TargetType="ToggleButton">
-							<Setter Property="Content">
-								<Setter.Value>
-									<Image Source="Assets/LineIcon.png" />
-								</Setter.Value>
-							</Setter>
-						</Style>
-					</ToggleButton.Style>
-					<ToggleButton.Template>
-						<ControlTemplate TargetType="ToggleButton">
-							<Border x:Name="border" CornerRadius="3" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
-								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-							</Border>
-							<ControlTemplate.Triggers>
-								<Trigger Property="IsChecked" Value="True">
-									<Setter TargetName="border" Property="Background" Value="#333333"/>
-								</Trigger>
-								<Trigger Property="IsChecked" Value="False">
-									<Setter TargetName="border" Property="Background" Value="Transparent"/>
-								</Trigger>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter TargetName="border" Property="Background" Value="#5500AAFF"/>
-								</Trigger>
-							</ControlTemplate.Triggers>
-						</ControlTemplate>
-					</ToggleButton.Template>
+				<ToggleButton Name="Tool_Line" Style="{StaticResource ToolButton}" Template="{StaticResource ToolButton_Template}">
+					<ToggleButton.Content>
+						<Image Source="{DynamicResource Icon_LineTool}" />
+					</ToggleButton.Content>
 					<ToggleButton.ToolTip>
 						<ToolTip>
 							<TextBlock Text="Line" />
 						</ToolTip>
 					</ToggleButton.ToolTip>
 				</ToggleButton>
-				<ToggleButton Name="Tool_Eraser" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
-					<ToggleButton.Style>
-						<Style TargetType="ToggleButton">
-							<Setter Property="Content">
-								<Setter.Value>
-									<Image Source="Assets/EraserIcon.png" />
-								</Setter.Value>
-							</Setter>
-						</Style>
-					</ToggleButton.Style>
-					<ToggleButton.Template>
-						<ControlTemplate TargetType="ToggleButton">
-							<Border x:Name="border" CornerRadius="3" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
-								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-							</Border>
-							<ControlTemplate.Triggers>
-								<Trigger Property="IsChecked" Value="True">
-									<Setter TargetName="border" Property="Background" Value="#333333"/>
-								</Trigger>
-								<Trigger Property="IsChecked" Value="False">
-									<Setter TargetName="border" Property="Background" Value="Transparent"/>
-								</Trigger>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter TargetName="border" Property="Background" Value="#5500AAFF"/>
-								</Trigger>
-							</ControlTemplate.Triggers>
-						</ControlTemplate>
-					</ToggleButton.Template>
+				<ToggleButton Name="Tool_Eraser" Style="{StaticResource ToolButton}">
+					<ToggleButton.Content>
+						<Image Source="{DynamicResource Icon_EraserTool}"/>
+					</ToggleButton.Content>
 					<ToggleButton.ToolTip>
 						<ToolTip>
 							<TextBlock Text="Eraser" />
@@ -126,34 +90,10 @@
 				</ToggleButton>
 			</WrapPanel>
 			<WrapPanel Grid.Row="2" Grid.Column="0" MinWidth="32" Background="#272727">
-				<ToggleButton Name="Tool_Selecteur" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
-					<ToggleButton.Style>
-						<Style TargetType="ToggleButton">
-							<Setter Property="Content">
-								<Setter.Value>
-									<Image Source="Assets/SelecteurIcon.png" />
-								</Setter.Value>
-							</Setter>
-						</Style>
-					</ToggleButton.Style>
-					<ToggleButton.Template>
-						<ControlTemplate TargetType="ToggleButton">
-							<Border x:Name="border" CornerRadius="3" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
-								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-							</Border>
-							<ControlTemplate.Triggers>
-								<Trigger Property="IsChecked" Value="True">
-									<Setter TargetName="border" Property="Background" Value="#333333"/>
-								</Trigger>
-								<Trigger Property="IsChecked" Value="False">
-									<Setter TargetName="border" Property="Background" Value="Transparent"/>
-								</Trigger>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter TargetName="border" Property="Background" Value="#5500AAFF"/>
-								</Trigger>
-							</ControlTemplate.Triggers>
-						</ControlTemplate>
-					</ToggleButton.Template>
+				<ToggleButton Name="Tool_Selecteur" Style="{StaticResource ToolButton}" Template="{StaticResource ToolButton_Template}">
+					<ToggleButton.Content>
+						<Image Source="{DynamicResource Icon_SelecteurTool}" />
+					</ToggleButton.Content>
 					<ToggleButton.ToolTip>
 						<ToolTip>
 							<TextBlock Text="Selection" />

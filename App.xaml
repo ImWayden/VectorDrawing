@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:VectorDrawing"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Styles/ToggleButtonStyles.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
     </Application.Resources>
 </Application>

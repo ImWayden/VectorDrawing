@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace VectorDrawing.Classes
 {
@@ -13,27 +14,32 @@ namespace VectorDrawing.Classes
 		public void Redo();
 	}
 
+	public delegate void DUpdate_Canvas();
 	public class Action_AddObject : IAction 
 	{
-
+		ConteneurCanvas canvas;
+		DUpdate_Canvas update_Canvas;
 		Nodes Object;
 		Nodes Layer;
 		int index;
 
-		public Action_AddObject(Nodes n, Nodes layer)
+		public Action_AddObject(Nodes n, Nodes layer, DUpdate_Canvas update_Canvas)
 		{
 			Object = n; 
 			Layer = layer;
+			this.update_Canvas = update_Canvas;
 		}
 
 		public void Undo()
 		{
 			index = Layer.Childs.IndexOf(Object);
 			Layer.Remove_Object(Object);
+			update_Canvas();
 		}
 		public void Redo()
 		{
 			Layer.Add_Object_At(Object, index);
+			update_Canvas();
 		}
 	}
 
@@ -100,13 +106,17 @@ namespace VectorDrawing.Classes
 
 		public void Undo()
 		{
+			if (UndoActions.Count <= 0)
+				return;
 			IAction action = UndoActions.Pop();
 			action.Undo();
-			UndoActions.Push(action);
+			RedoActions.Push(action);
 		}
 
 		public void Redo()
 		{
+			if (RedoActions.Count <= 0)
+				return;
 			IAction action = RedoActions.Pop();
 			action.Redo();
 			UndoActions.Push(action);
