@@ -21,7 +21,7 @@ namespace VectorDrawing
 	public partial class MainWindow : Window
 	{
 		private bool isloaded = false;
-		private DrawingCanvas DrawingCanvas;
+		private ConteneurCanvas ConteneurCanvas;
 		private ToolBox toolBox;
 		public MainWindow()
 		{
@@ -40,21 +40,21 @@ namespace VectorDrawing
 		private void MainWindow_Loaded(object sender, RoutedEventArgs e)
 		{
 			Debug.WriteLine("loaded");
-			Initialize_DrawingCanvas();
+			Initialize_Canvas();
 			Initialize_ToolBox();
 			isloaded = true;
 			//throw new NotImplementedException();
 		}
 
-		private void Initialize_DrawingCanvas()
+		private void Initialize_Canvas()
 		{
-			DrawingCanvas = new DrawingCanvas(canvas);
+			ConteneurCanvas = new ConteneurCanvas(Drawing_Canvas, Grid_Canvas, Conteneur_Grid);
 		}
 
 		private void Initialize_ToolBox()
 		{
 			toolBox = new ToolBox(ToolBoxPanel);
-			toolBox.ToolSelected += DrawingCanvas.Swap_ActiveTool;
+			toolBox.ToolSelected += ConteneurCanvas.Swap_ActiveTool;
 		}
 	}
 }

@@ -24,7 +24,10 @@
 			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="401*"/>
 		</Grid.RowDefinitions>
-		<Canvas Grid.Row="2" Grid.Column="2"  Name="canvas" Background="#333333" Grid.ColumnSpan="2"/>
+		<Grid Name="Conteneur_Grid" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Background="#333333">
+			<Canvas Name="Grid_Canvas" Background="Transparent" />
+			<Canvas Name="Drawing_Canvas" Background="Transparent" />
+		</Grid>
 		<Menu Grid.Row="0" Grid.ColumnSpan="5" BorderBrush="#333333" MinHeight="20" Background="#333333" Grid.RowSpan="1">
 			<MenuItem Header="Fichier" BorderBrush="#333333"  Background="#333333" Foreground="White">
 				<MenuItem Header="Nouveau" BorderBrush="#333333" Background="#333333" Foreground="White"/>
@@ -40,8 +43,15 @@
 			</MenuItem>
 			<!-- Ajoutez d'autres éléments de menu ici -->
 		</Menu>
-		<Border Grid.Row="1" Grid.ColumnSpan="5" BorderBrush="#191919" BorderThickness="1">
-			<StackPanel Grid.Row="1" Grid.ColumnSpan="6" Height="32" MinHeight="20"  Background="#272727"/>
+		<Border Grid.Row="1" Grid.ColumnSpan="5" BorderBrush="#191919" BorderThickness="1" Background="#272727">
+			<StackPanel Grid.Row="1" Grid.ColumnSpan="6" Height="32" MinHeight="20"  Background="#272727" Orientation="Horizontal" HorizontalAlignment="Left">
+				<Button Name="UndoButton" Width="32" Height="32" Background="Transparent">
+					<Image Source="Assets/UndoIcon.png" />
+				</Button>
+				<Button Name="RedoButton" Width="32" Height="32" Background="Transparent">
+					<Image Source="Assets/RedoIcon.png" />
+				</Button>
+			</StackPanel>
 		</Border>
 		<StackPanel Name="ToolBoxPanel" Grid.Row="2" Grid.Column="0" Background="#272727" Grid.ColumnSpan="2" MinWidth="32">
 			<WrapPanel Grid.Row="2"  MinWidth="32" Background="#272727" Margin="0,15,0,0">

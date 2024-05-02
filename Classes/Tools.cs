@@ -12,6 +12,7 @@ namespace VectorDrawing.Classes
 	{
 		protected Canvas _canvas;
 		protected DrawingCanvas _drawingCanvas;
+		protected ConteneurCanvas _conteneurCanvas;
 		protected Classes.Camera _camera;
 		protected bool IsRightMouseBouttonDown;
 		protected bool IsLeftMouseBouttonDown;
@@ -30,6 +31,12 @@ namespace VectorDrawing.Classes
 		public DrawingCanvas DrawingCanvas { 
 			get { return _drawingCanvas; } 
 			set { _drawingCanvas = value; }
+		}
+
+		public ConteneurCanvas ConteneurCanvas
+		{
+			get { return _conteneurCanvas; }
+			set { _conteneurCanvas = value; }
 		}
 		public virtual void OnMouseMove(object sender, MouseEventArgs e) { }
 		public virtual void OnMouseWheel(Canvas canvas) { }

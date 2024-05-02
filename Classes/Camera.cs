@@ -71,11 +71,11 @@ namespace VectorDrawing.Classes
 
 		public int SetDeepness()
 		{
-			if (Scale >= 10000)
+			if (Scale >= 5000)
 				return (4);
-			else if (Scale >= 1000)
+			else if (Scale >= 500)
 				return (3);
-			else if (Scale >= 100)
+			else if (Scale >= 50)
 				return (2);
 			else
 				return (1);
