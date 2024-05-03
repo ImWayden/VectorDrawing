@@ -12,6 +12,7 @@ using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using VectorDrawing.Classes;
+using VectorDrawing.ViewModel;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace VectorDrawing
@@ -30,6 +31,14 @@ namespace VectorDrawing
 		{
 			Debug.WriteLine("Main");
 			InitializeComponent();
+/*			BitmapViewModel Drawing_bitmap = new BitmapViewModel();
+			
+			Drawing_Canvas.DataContext = Drawing_bitmap;
+
+			BitmapViewModel Grid_Bitmap = new BitmapViewModel();
+			Grid_Canvas.DataContext = Grid_Bitmap;
+*/
+
 			Loaded += MainWindow_Loaded;
 			SizeChanged += MainWindow_SizeChanged;
 		}

@@ -48,7 +48,7 @@ namespace VectorDrawing.Classes
 		//potentiels probleme de decallage dans le calque
 		private void Create_Line(Point Position)
 		{
-			P1 = Utils.ScreenToPlan(Position, Canvas, Camera);
+			P1 = Camera.PlanToCam(Position, new Plan2D(DrawingCanvas.canvas.ActualWidth, DrawingCanvas.canvas.ActualHeight));
 			P1.X = Math.Round(P1.X, Camera.deepness - 1);
 			P1.Y = Math.Round(P1.Y, Camera.deepness - 1);
 			P2 = P1;
@@ -97,7 +97,7 @@ namespace VectorDrawing.Classes
 			}
 			if (IsLeftMouseBouttonDown && Canvas.IsMouseCaptured)
 			{
-				Point point = Utils.ScreenToPlan(e.GetPosition(Canvas), Canvas, Camera);
+				Point point = Camera.PlanToCam(e.GetPosition(Canvas), new Plan2D(DrawingCanvas.canvas.ActualWidth, DrawingCanvas.canvas.ActualHeight));
 				Nodes_Lines tmp_Line;
 				tmp_Line = null;
 				point.X = Math.Round(point.X, Camera.deepness - 1);

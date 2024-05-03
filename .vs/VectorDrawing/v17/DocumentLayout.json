@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "D:\\Coding_Projects\\VectorDrawing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\conteneurcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\conteneurcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\tools_multilines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\tools_multilines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\drawingcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\drawingcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\tools_line.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +13,82 @@
     {
       "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\model\\nodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:model\\nodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\conteneurcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\conteneurcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\gridcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\gridcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\tools_multilines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\tools_multilines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\plan2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\plan2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\scenetree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\scenetree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\nodes_lines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\nodes_lines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\model\\nodes_lines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:model\\nodes_lines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\mvvm\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:mvvm\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\viewmodel\\bitmapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:viewmodel\\bitmapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\model\\bitmapmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:model\\bitmapmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\model\\box.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:model\\box.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\model\\nodes_layers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:model\\nodes_layers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\nodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\nodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\nodes_layers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\nodes_layers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|d:\\coding_projects\\vectordrawing\\classes\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BADDC117-9CA3-4EEB-AA02-5D4084E117A7}|VectorDrawing.csproj|solutionrelative:classes\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,63 +98,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Tools_MultiLines.cs",
-              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Tools_MultiLines.cs",
-              "RelativeDocumentMoniker": "Classes\\Tools_MultiLines.cs",
-              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Tools_MultiLines.cs",
-              "RelativeToolTip": "Classes\\Tools_MultiLines.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "Camera.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Camera.cs",
+              "RelativeDocumentMoniker": "Classes\\Camera.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Camera.cs",
+              "RelativeToolTip": "Classes\\Camera.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAIA7wFYAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T19:41:22.728Z",
+              "WhenOpened": "2024-05-03T00:06:41.234Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 13,
+              "Title": "Nodes_Lines.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Model\\Nodes_Lines.cs",
+              "RelativeDocumentMoniker": "Model\\Nodes_Lines.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Model\\Nodes_Lines.cs",
+              "RelativeToolTip": "Model\\Nodes_Lines.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:51:06.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ConteneurCanvas.cs",
               "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\ConteneurCanvas.cs",
               "RelativeDocumentMoniker": "Classes\\ConteneurCanvas.cs",
               "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\ConteneurCanvas.cs",
               "RelativeToolTip": "Classes\\ConteneurCanvas.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAASwHkAAAAAAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAADYAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-02T19:41:01.578Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Tools.cs",
-              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Tools.cs",
-              "RelativeDocumentMoniker": "Classes\\Tools.cs",
-              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Tools.cs*",
-              "RelativeToolTip": "Classes\\Tools.cs*",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAPAAAA",
+              "DocumentIndex": 0,
+              "Title": "DrawingCanvas.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\DrawingCanvas.cs",
+              "RelativeDocumentMoniker": "Classes\\DrawingCanvas.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\DrawingCanvas.cs*",
+              "RelativeToolTip": "Classes\\DrawingCanvas.cs*",
+              "ViewState": "AQIAABUAAAAAAAAAAAAawC4AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T19:38:51.23Z",
+              "WhenOpened": "2024-05-02T21:33:04.165Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
+              "Title": "Nodes_Lines.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Nodes_Lines.cs",
+              "RelativeDocumentMoniker": "Classes\\Nodes_Lines.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Nodes_Lines.cs",
+              "RelativeToolTip": "Classes\\Nodes_Lines.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwA4AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:53:14.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SceneTree.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\SceneTree.cs",
+              "RelativeDocumentMoniker": "Classes\\SceneTree.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\SceneTree.cs",
+              "RelativeToolTip": "Classes\\SceneTree.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:22:35.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Tools_Line.cs",
               "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Tools_Line.cs",
               "RelativeDocumentMoniker": "Classes\\Tools_Line.cs",
-              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Tools_Line.cs*",
-              "RelativeToolTip": "Classes\\Tools_Line.cs*",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAXAAAA",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Tools_Line.cs",
+              "RelativeToolTip": "Classes\\Tools_Line.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowDkAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-02T19:39:01.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAiwCcAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:56:56.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Nodes.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Model\\Nodes.cs",
+              "RelativeDocumentMoniker": "Model\\Nodes.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Model\\Nodes.cs",
+              "RelativeToolTip": "Model\\Nodes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:51:22.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -94,6 +227,162 @@
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-05-02T19:36:41.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\MVVM\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "MVVM\\ViewModelBase.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\MVVM\\ViewModelBase.cs",
+              "RelativeToolTip": "MVVM\\ViewModelBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:11:42.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Utils.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Utils.cs",
+              "RelativeDocumentMoniker": "Classes\\Utils.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Utils.cs",
+              "RelativeToolTip": "Classes\\Utils.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAEwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:00:15.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Plan2D.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Plan2D.cs",
+              "RelativeDocumentMoniker": "Classes\\Plan2D.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Plan2D.cs",
+              "RelativeToolTip": "Classes\\Plan2D.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBAAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:10:38.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GridCanvas.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\GridCanvas.cs",
+              "RelativeDocumentMoniker": "Classes\\GridCanvas.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\GridCanvas.cs",
+              "RelativeToolTip": "Classes\\GridCanvas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T00:25:05.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Tools_MultiLines.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Tools_MultiLines.cs",
+              "RelativeDocumentMoniker": "Classes\\Tools_MultiLines.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Tools_MultiLines.cs",
+              "RelativeToolTip": "Classes\\Tools_MultiLines.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAawDIAAAByAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T19:41:22.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BitMapViewModel.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\ViewModel\\BitMapViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\BitMapViewModel.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\ViewModel\\BitMapViewModel.cs",
+              "RelativeToolTip": "ViewModel\\BitMapViewModel.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAawA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T23:07:57.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BitmapModel.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Model\\BitmapModel.cs",
+              "RelativeDocumentMoniker": "Model\\BitmapModel.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Model\\BitmapModel.cs",
+              "RelativeToolTip": "Model\\BitmapModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:49:39.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Box.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Model\\Box.cs",
+              "RelativeDocumentMoniker": "Model\\Box.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Model\\Box.cs",
+              "RelativeToolTip": "Model\\Box.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:52:01.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Nodes_Layers.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Model\\Nodes_Layers.cs",
+              "RelativeDocumentMoniker": "Model\\Nodes_Layers.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Model\\Nodes_Layers.cs",
+              "RelativeToolTip": "Model\\Nodes_Layers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:50:57.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Nodes.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Nodes.cs",
+              "RelativeDocumentMoniker": "Classes\\Nodes.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Nodes.cs",
+              "RelativeToolTip": "Classes\\Nodes.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAmwF0AAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:22:46.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Nodes_Layers.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Nodes_Layers.cs",
+              "RelativeDocumentMoniker": "Classes\\Nodes_Layers.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Nodes_Layers.cs",
+              "RelativeToolTip": "Classes\\Nodes_Layers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T22:22:46.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Tools.cs",
+              "DocumentMoniker": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Tools.cs",
+              "RelativeDocumentMoniker": "Classes\\Tools.cs",
+              "ToolTip": "D:\\Coding_Projects\\VectorDrawing\\Classes\\Tools.cs",
+              "RelativeToolTip": "Classes\\Tools.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T19:38:51.23Z",
               "EditorCaption": ""
             }
           ]

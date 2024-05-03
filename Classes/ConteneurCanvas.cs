@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace VectorDrawing.Classes
 {
@@ -18,6 +19,7 @@ namespace VectorDrawing.Classes
 		GridCanvas gridcanvas;
 		Grid conteneur;
 		Camera camera;
+		WriteableBitmap WriteableBitmap;
 		private Tools ActiveTool;
 		private Point startPoint;
 		private Point Drawing_startPoint;
@@ -120,10 +122,10 @@ namespace VectorDrawing.Classes
 			tool.ConteneurCanvas = this;
 		}
 
-
+		//porbably should be partially or totally moved into the camera class
 		private void Zoom_Manager(int delta, Point MousePos)
 		{
-			Point InPlanMousePos = Utils.ScreenToPlan(MousePos, drawingCanvas.canvas, camera);
+			Point InPlanMousePos = camera.PlanToCam(MousePos, new Plan2D(drawingCanvas.canvas.ActualWidth, drawingCanvas.canvas.ActualHeight));
 			Vector CameraMov;
 
 			if (delta > 0)
@@ -138,9 +140,8 @@ namespace VectorDrawing.Classes
 				if (camera.Scale <= 5)
 					camera.Scale = 5;
 			}
-			// Ajuster la position de la caméra pour compenser le déplacement résultant
-			camera.Update(conteneur.ActualHeight, drawingCanvas.canvas.ActualWidth);
-			Point NewInPlanMousePos = Utils.ScreenToPlan(MousePos, drawingCanvas.canvas, camera);
+			camera.Update(drawingCanvas.canvas.ActualHeight, drawingCanvas.canvas.ActualWidth);
+			Point NewInPlanMousePos = camera.PlanToCam(MousePos, new Plan2D(drawingCanvas.canvas.ActualWidth, drawingCanvas.canvas.ActualHeight));
 			CameraMov = InPlanMousePos - NewInPlanMousePos;
 			camera.Position += CameraMov;
 			camera.deepness = camera.SetDeepness();

@@ -33,8 +33,8 @@ namespace VectorDrawing.Classes
 			Brush color;
 			for (double x = Math.Floor(camera.left); x <= camera.right; x += camera.step)
 			{
-				Point screenStartPoint = Utils.PlanToScreen(new Point(x, camera.top),canvas, camera);
-				Point screenEndPoint = Utils.PlanToScreen(new Point(x, camera.bottom), canvas, camera);
+				Point screenStartPoint = camera.CamToPlan(new Point(x, camera.top), new Plan2D(canvas.ActualWidth, canvas.ActualHeight));
+				Point screenEndPoint = camera.CamToPlan(new Point(x, camera.bottom), new Plan2D(canvas.ActualWidth, canvas.ActualHeight));
 				opacity = Utils.CalculateOpacity(x * camera.scale_factor);
 				if (screenStartPoint.X < 0 || screenEndPoint.X > canvas.ActualWidth)
 					continue;
@@ -46,8 +46,8 @@ namespace VectorDrawing.Classes
 			}
 			for (double y = Math.Floor(camera.bottom); y <= camera.top; y += camera.step)
 			{
-				Point screenStartPoint = Utils.PlanToScreen(new Point(camera.left, y), canvas, camera);
-				Point screenEndPoint = Utils.PlanToScreen(new Point(camera.right, y), canvas, camera);
+				Point screenStartPoint = camera.CamToPlan(new Point(camera.left, y), new Plan2D(canvas.ActualWidth, canvas.ActualHeight));
+				Point screenEndPoint = camera.CamToPlan(new Point(camera.right, y), new Plan2D(canvas.ActualWidth, canvas.ActualHeight));
 
 				if (screenStartPoint.Y < 0 || screenEndPoint.Y > canvas.ActualHeight)
 					continue;

@@ -35,28 +35,6 @@ namespace VectorDrawing.Classes
 				return 0.2;
 		}
 
-		static public Point ScreenToPlan(Point ScreenPos, Canvas canvas, Camera camera)
-		{
-			double relativeX = ScreenPos.X / canvas.ActualWidth;
-			double relativeY = ScreenPos.Y / canvas.ActualHeight;
 
-			double planX = camera.Position.X + (relativeX - 0.5) * camera.Width;
-			double planY = camera.Position.Y + (relativeY - 0.5) * camera.Height;
-			return new Point(planX, planY);
-		}
-
-		static public Point PlanToScreen(Point planPoint, Canvas canvas, Camera camera)
-		{
-
-			double screenWidth = canvas.ActualWidth; // Largeur de l'écran
-			double screenHeight = canvas.ActualHeight; // Hauteur de l'écran
-
-			// Calculer la position du point sur l'écran en fonction de la position et du zoom de la caméra
-			double screenX = (planPoint.X - camera.Position.X) * camera.Scale + screenWidth / 2;
-			double screenY = (planPoint.Y - camera.Position.Y) * camera.Scale + screenHeight / 2;
-
-			// Retourner les coordonnées du point converties en coordonnées de l'écran
-			return new Point(screenX, screenY);
-		}
 	}
 }

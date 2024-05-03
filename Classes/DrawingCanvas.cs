@@ -30,10 +30,9 @@ namespace VectorDrawing.Classes
 
 		public void Draw_Scene()
 		{
-			Application.Current.Dispatcher.Invoke(() =>
-			{
-				canvas.Children.Clear();
-			});
+
+			canvas.Children.Clear();
+
 			foreach (Nodes Layer in Scene.Layers)
 			{
 				if(camera.box.IsIntersecting(Layer.box))
@@ -44,8 +43,8 @@ namespace VectorDrawing.Classes
 		public void Draw_Line(Nodes n)
 		{
 			Nodes_Lines line = n as Nodes_Lines;
-			Point P1 = Utils.PlanToScreen(line.P1, canvas, camera);
-			Point P2 = Utils.PlanToScreen(line.P2, canvas, camera);
+			Point P1 = camera.CamToPlan(line.P1, new Plan2D(canvas.ActualWidth, canvas.ActualHeight));
+			Point P2 = camera.CamToPlan(line.P2, new Plan2D(canvas.ActualWidth, canvas.ActualHeight));
 			Utils.AddLineToCanvas(canvas, P1, P2, Brushes.White, 1.0, 1);
 		}
 
