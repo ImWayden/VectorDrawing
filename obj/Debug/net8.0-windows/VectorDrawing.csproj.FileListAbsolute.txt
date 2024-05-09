@@ -21,3 +21,6 @@ D:\Coding_Projects\VectorDrawing\obj\Debug\net8.0-windows\ref\VectorDrawing.dll
 D:\Coding_Projects\VectorDrawing\obj\Debug\net8.0-windows\VectorDrawing.sourcelink.json
 D:\Coding_Projects\VectorDrawing\obj\Debug\net8.0-windows\Styles\ToggleButtonStyles.baml
 D:\Coding_Projects\VectorDrawing\obj\Debug\net8.0-windows\App.baml
+D:\Coding_Projects\VectorDrawing\obj\Debug\net8.0-windows\VectorDrawing.csproj.AssemblyReference.cache
+D:\Coding_Projects\VectorDrawing\bin\Debug\net8.0-windows\WriteableBitmapEx.Wpf.dll
+D:\Coding_Projects\VectorDrawing\obj\Debug\net8.0-windows\VectorDr.0140CAA6.Up2Date

@@ -12,6 +12,7 @@ using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using VectorDrawing.Classes;
+using VectorDrawing.Model;
 using VectorDrawing.ViewModel;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -24,21 +25,24 @@ namespace VectorDrawing
 	{
 		public ICommand UndoCommand { get; set; }
 		private bool isloaded = false;
-		private ConteneurCanvas ConteneurCanvas;
-		private ToolBox toolBox;
-		private ToolBar_Manager toolBar;
+		private Model.Camera camera;
+
+		private WriteableBitmap grid_bmp;
+		private GridViewModel Grid_VM;
+
+		private WriteableBitmap drawing_bmp;
+		private DrawingViewModel Drawing_VM;
+
+		private SceneTreeViewModel SceneTree_VM;
+
+		private ToolBoxViewModel ToolBox_VM;
+
+		private MainViewModel MainViewModel;
+
 		public MainWindow()
 		{
 			Debug.WriteLine("Main");
 			InitializeComponent();
-/*			BitmapViewModel Drawing_bitmap = new BitmapViewModel();
-			
-			Drawing_Canvas.DataContext = Drawing_bitmap;
-
-			BitmapViewModel Grid_Bitmap = new BitmapViewModel();
-			Grid_Canvas.DataContext = Grid_Bitmap;
-*/
-
 			Loaded += MainWindow_Loaded;
 			SizeChanged += MainWindow_SizeChanged;
 		}
@@ -47,31 +51,57 @@ namespace VectorDrawing
 		{
 			if (!isloaded)
 				return;
+			Grid_VM.UpdateBitmap();
 		}
 
 		private void MainWindow_Loaded(object sender, RoutedEventArgs e)
 		{
 			Debug.WriteLine("loaded");
-			Initialze_ToolBar();
-			Initialize_Canvas();
-			Initialize_ToolBox();
+			camera = new Model.Camera();
+			camera.Update(Conteneur_Grid.ActualHeight, Conteneur_Grid.ActualWidth);
+			Initialize_ViewModels();
 			isloaded = true;
 			//throw new NotImplementedException();
 		}
-		private void Initialze_ToolBar()
+		// i don't like the fact that the part responsible to draw on the bitmap is coupled with the scenetreeviewmodel 
+		private void Initialize_ViewModels()
 		{
-			 toolBar = new ToolBar_Manager(MyToolBar);
+			SceneTree_VM = new SceneTreeViewModel();
+			grid_bmp = new WriteableBitmap((int)Conteneur_Grid.ActualWidth, (int)Conteneur_Grid.ActualHeight, 96, 96, PixelFormats.Pbgra32, null);
+			Grid_VM = new GridViewModel(grid_bmp, camera);
+			drawing_bmp = new WriteableBitmap((int)Conteneur_Grid.ActualWidth, (int)Conteneur_Grid.ActualHeight, 96, 96, PixelFormats.Pbgra32, null);
+			Drawing_VM = new DrawingViewModel(drawing_bmp, camera, SceneTree_VM); 
+			Grid_Layer.DataContext = Grid_VM;
+			Drawing_Layer.DataContext = Drawing_VM;
+			ToolBox_VM = new ToolBoxViewModel(Drawing_VM, SceneTree_VM, camera, Grid_VM);
+			ToolBoxPanel.DataContext = ToolBox_VM;
+			MainViewModel = new MainViewModel(Grid_VM, Drawing_VM, SceneTree_VM, ToolBox_VM, camera);
+			Conteneur_Grid.DataContext = MainViewModel;
+			Conteneur_Grid.MouseMove += MainViewModel.OnMouseMove;
+			Conteneur_Grid.MouseLeftButtonDown += MainViewModel.OnLeftButtonDown;
+			Conteneur_Grid.MouseLeftButtonUp += MainViewModel.OnLeftButtonUp;
+			Conteneur_Grid.MouseRightButtonDown += MainViewModel.OnRightButtonDown;
+			Conteneur_Grid.MouseRightButtonUp += MainViewModel.OnRightButtonUp;
+			Conteneur_Grid.MouseWheel += MainViewModel.OnMouseWheel;
+			Conteneur_Grid.SizeChanged += MainViewModel.OnSizeChanged;
+			MyToolBar.DataContext = UndoManager.GetInstance();
+			Init_Keybinds();
 		}
-		private void Initialize_Canvas()
+		private void Init_Keybinds() 
 		{
-			ConteneurCanvas = new ConteneurCanvas(Drawing_Canvas, Grid_Canvas, Conteneur_Grid);
-		}
+			var undoBinding = new KeyBinding();
+			undoBinding.Command = UndoManager.GetInstance().UndoCommand;
+			undoBinding.Key = Key.Z;
+			undoBinding.Modifiers = ModifierKeys.Control;
 
-		private void Initialize_ToolBox()
-		{
-			toolBox = new ToolBox(ToolBoxPanel);
-			toolBox.ToolSelected += ConteneurCanvas.Swap_ActiveTool;
-		}
+			var redoBinding = new KeyBinding();
+			redoBinding.Command = UndoManager.GetInstance().RedoCommand;
+			redoBinding.Key = Key.Y;
+			redoBinding.Modifiers = ModifierKeys.Control;
 
+			// Ajoutez les KeyBindings à la collection InputBindings de la fenêtre
+			InputBindings.Add(undoBinding);
+			InputBindings.Add(redoBinding);
+		}
 	}
 }

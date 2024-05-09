@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "77K0Rp/+rlb5jT15hwS2oKgv8/s+HIsRnA/zS+StO0Quu8w0mQ/3I77cmZrb9k232TfiiO9BYwDRUJfYghOgeA==",
+  "dgSpecHash": "aQh1yMrlHqG6bE/ovYFQXCE+/l7vzKxhN0hbI1b599uM6B6Dmo5gDh0OAd6IObiy/AzPMFGWct+vhNH1qf+ejQ==",
   "success": true,
   "projectFilePath": "D:\\Coding_Projects\\VectorDrawing\\VectorDrawing.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\minat\\.nuget\\packages\\writeablebitmapex\\1.6.8\\writeablebitmapex.1.6.8.nupkg.sha512"
+  ],
   "logs": []
 }

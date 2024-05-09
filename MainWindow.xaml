@@ -1,15 +1,12 @@
 ﻿<Window x:Class="VectorDrawing.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VectorDrawing"
-        mc:Ignorable="d"
+		mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="775">
-	<Window.InputBindings>
-		<KeyBinding Command="{Binding UndoCommand}" Key="Z" Modifiers="Ctrl"/>
-		<KeyBinding Command="{Binding RedoCommand}" Key="Y" Modifiers="Ctrl"/>
-	</Window.InputBindings>
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<!-- Wrap Panel -->
@@ -29,8 +26,8 @@
 			<RowDefinition Height="401*"/>
 		</Grid.RowDefinitions>
 		<Grid Name="Conteneur_Grid" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Background="#333333">
-			<Canvas Name="Grid_Canvas" Background="Transparent" />
-			<Canvas Name="Drawing_Canvas" Background="Transparent" />
+			<Image Name="Grid_Layer" Source="{Binding Bitmap}" Stretch="None" />
+			<Image Name="Drawing_Layer" Source="{Binding Bitmap}" Stretch="None"/>
 		</Grid>
 		<Menu Grid.Row="0" Grid.ColumnSpan="5" BorderBrush="#333333" MinHeight="20" Background="#333333" Grid.RowSpan="1">
 			<MenuItem Header="Fichier" BorderBrush="#333333"  Background="#333333" Foreground="White">
@@ -49,26 +46,18 @@
 		</Menu>
 		<Border Grid.Row="1" Grid.ColumnSpan="5" BorderBrush="#191919" BorderThickness="1" Background="#272727">
 			<ToolBar Name="MyToolBar" Grid.Row="1" Grid.ColumnSpan="6" Height="32" MinHeight="20"  Background="#272727" HorizontalAlignment="Left">
-				<Button Name="UndoButton" Width="32" Height="32" Background="Transparent">
+				<Button Name="UndoButton" Width="32" Height="32" Background="Transparent" Command="{Binding UndoCommand}">
 					<Image Source="Assets/UndoIcon.png" />
 				</Button>
-				<Button Name="RedoButton" Width="32" Height="32" Background="Transparent">
+				<Button Name="RedoButton" Width="32" Height="32" Background="Transparent" Command="{Binding RedoCommand}">
 					<Image Source="Assets/RedoIcon.png" />
 				</Button>
 			</ToolBar>
 		</Border>
 		<StackPanel Name="ToolBoxPanel" Grid.Row="2" Grid.Column="0" Background="#272727" Grid.ColumnSpan="2" MinWidth="32">
-			<StackPanel.Resources>
-				<Style TargetType="ToggleButton" x:Key="ToolButton">
-					<Setter Property="Width" Value="32"/>
-					<Setter Property="Height" Value="32"/>
-					<Setter Property="Background" Value="Transparent"/>
-					<Setter Property="BorderBrush" Value="Transparent"/>
-				</Style>
-			</StackPanel.Resources>
 			<WrapPanel Grid.Row="2"  MinWidth="32" Background="#272727" Margin="0,15,0,0">
 				<!-- Tool 1 -->
-				<ToggleButton Name="Tool_Line" Style="{StaticResource ToolButton}" Template="{StaticResource ToolButton_Template}">
+				<ToggleButton Name="Tool_Line" IsChecked="{Binding ToolsCollection[0].IsChecked, Mode=TwoWay}" Command="{Binding SwapToolCommand}" CommandParameter="Line_Tool" Style="{StaticResource ToolButton}" Template="{StaticResource ToolButton_Template}">
 					<ToggleButton.Content>
 						<Image Source="{DynamicResource Icon_LineTool}" />
 					</ToggleButton.Content>
@@ -78,7 +67,7 @@
 						</ToolTip>
 					</ToggleButton.ToolTip>
 				</ToggleButton>
-				<ToggleButton Name="Tool_Eraser" Style="{StaticResource ToolButton}" Template="{StaticResource ToolButton_Template}">
+				<ToggleButton Name="Tool_Eraser" IsChecked="{Binding ToolsCollection[1].IsChecked, Mode=TwoWay}" Command="{Binding SwapToolCommand}" CommandParameter="Eraser_Tool" Style="{StaticResource ToolButton}" Template="{StaticResource ToolButton_Template}">
 					<ToggleButton.Content>
 						<Image Source="{DynamicResource Icon_EraserTool}"/>
 					</ToggleButton.Content>
@@ -90,7 +79,7 @@
 				</ToggleButton>
 			</WrapPanel>
 			<WrapPanel Grid.Row="2" Grid.Column="0" MinWidth="32" Background="#272727">
-				<ToggleButton Name="Tool_Selecteur" Style="{StaticResource ToolButton}" Template="{StaticResource ToolButton_Template}">
+				<ToggleButton Name="Tool_Selecteur" IsChecked="{Binding ToolsCollection[2].IsChecked, Mode=TwoWay}" Command="{Binding SwapToolCommand}" CommandParameter="Selecteur_Tool" Style="{StaticResource ToolButton}" Template="{StaticResource ToolButton_Template}">
 					<ToggleButton.Content>
 						<Image Source="{DynamicResource Icon_SelecteurTool}" />
 					</ToggleButton.Content>
@@ -106,6 +95,7 @@
 		</StackPanel>
 		<GridSplitter Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Background="#272727"/>
 		<GridSplitter Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" Background="#272727"/>
-		<StackPanel Grid.Row="2" Grid.Column="4" Background="#212121" MinWidth="150"/>
+		<StackPanel Grid.Row="2" Grid.Column="4" Background="#212121" MinWidth="150">
+		</StackPanel>
 	</Grid>
 </Window>

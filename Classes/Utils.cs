@@ -30,11 +30,26 @@ namespace VectorDrawing.Classes
 		{
 			double value = Math.Round(coordinate, 5) % 1.0;
 			if (value == 0)
-				return 0.5;
+				return 0.8;
 			else
-				return 0.2;
+				return 0.6;
 		}
 
+		public static Color AdjustOpacity(Color color, double opacityFactor)
+		{
+			// Assurez-vous que le facteur d'opacité est compris entre 0 et 1
+			opacityFactor = Math.Max(0.0, Math.Min(1.0, opacityFactor));
 
+			// Appliquer le facteur d'opacité à la valeur alpha de la couleur
+			byte newAlpha = (byte)(color.A * opacityFactor);
+
+			// Appliquer le facteur d'opacité aux composantes RGB de la couleur en tenant compte de la nouvelle valeur alpha
+			byte newR = (byte)((color.R / 255.0) * newAlpha);
+			byte newG = (byte)((color.G / 255.0) * newAlpha);
+			byte newB = (byte)((color.B / 255.0) * newAlpha);
+
+			// Retourner une nouvelle couleur avec les composantes RVB ajustées et la nouvelle valeur alpha
+			return Color.FromArgb(color.A, newR, newG, newB);
+		}
 	}
 }

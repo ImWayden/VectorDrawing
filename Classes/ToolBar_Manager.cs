@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows;
-
+/*
 namespace VectorDrawing.Classes
 {
 	internal class ToolBar_Manager
@@ -13,7 +13,8 @@ namespace VectorDrawing.Classes
 		private UndoManager undoManager;
 		private ToolBar toolbar;
 
-		public ToolBar_Manager(ToolBar toolBar) {
+		public ToolBar_Manager(ToolBar toolBar)
+		{
 			this.toolbar = toolBar;
 			undoManager = UndoManager.GetInstance();
 			Init_Buttons();
@@ -36,3 +37,4 @@ namespace VectorDrawing.Classes
 		}
 	}
 }
+*/

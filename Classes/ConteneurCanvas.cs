@@ -9,10 +9,10 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-
+/*
 namespace VectorDrawing.Classes
 {
-
+	
 	internal class ConteneurCanvas
 	{
 		DrawingCanvas drawingCanvas;
@@ -150,7 +150,6 @@ namespace VectorDrawing.Classes
 			Update_Canvas();
 		}
 
-
 		public void Update_Canvas()
 		{
 			gridcanvas.Draw_Grid();
@@ -159,3 +158,4 @@ namespace VectorDrawing.Classes
 		}
 	}
 }
+	*/

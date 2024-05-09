@@ -23,7 +23,7 @@ namespace VectorDrawing.ViewModel
 				if (_bitmapModel != value)
 				{
 					_bitmapModel = value;
-					OnPropertyChanged(nameof(BitmapModel));
+					OnPropertyChanged();
 				}
 			}
 		}
@@ -38,5 +38,6 @@ namespace VectorDrawing.ViewModel
 		{
 			BitmapModel.Bitmap = newBitmap;
 		}
+
 	}
 }
