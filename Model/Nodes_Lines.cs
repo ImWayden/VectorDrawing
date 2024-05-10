@@ -7,6 +7,7 @@ using System.Windows;
 
 namespace VectorDrawing.Model
 {
+	[Serializable]
 	internal class Nodes_Lines : Nodes
 	{
 		private Point _P1;
@@ -38,6 +39,7 @@ namespace VectorDrawing.Model
 		public Nodes_Lines(Point P1, Point P2) {
 			this.P1 = P1;
 			this.P2 = P2;
+			Type = "Nodes_Lines"; 
 			Update_Corners();
 		}
 		public override void Determine_Top_Right_Corner()

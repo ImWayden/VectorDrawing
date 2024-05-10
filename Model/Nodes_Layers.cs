@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace VectorDrawing.Model
 {
+	[Serializable]
 	public class Nodes_Layers:Nodes
 	{
 		private bool _isvisible;
@@ -33,6 +34,7 @@ namespace VectorDrawing.Model
 		public Nodes_Layers() {
 			Color = Color.White;
 			Name = "Layer";
+			Type = "Nodes_Layers";
 			IsVisible = true;
 		}
 

@@ -34,7 +34,7 @@ namespace VectorDrawing
 		private DrawingViewModel Drawing_VM;
 
 		private SceneTreeViewModel SceneTree_VM;
-
+		private ToolBarViewModel ToolBar_VM;
 		private ToolBoxViewModel ToolBox_VM;
 
 		private MainViewModel MainViewModel;
@@ -84,7 +84,9 @@ namespace VectorDrawing
 			Conteneur_Grid.MouseRightButtonUp += MainViewModel.OnRightButtonUp;
 			Conteneur_Grid.MouseWheel += MainViewModel.OnMouseWheel;
 			Conteneur_Grid.SizeChanged += MainViewModel.OnSizeChanged;
-			MyToolBar.DataContext = UndoManager.GetInstance();
+			MyToolBar.DataContext = new SaveManager(SceneTree_VM,Drawing_VM);
+			RedoButton.DataContext = UndoManager.GetInstance();
+			UndoButton.DataContext = UndoManager.GetInstance();
 			Init_Keybinds();
 		}
 		private void Init_Keybinds() 

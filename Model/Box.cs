@@ -9,6 +9,7 @@ using System.Windows.Navigation;
 
 namespace VectorDrawing.Model
 {
+	[Serializable]
 	public class Box
 	{
 		public Point Top_Left_Corner;

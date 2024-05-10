@@ -12,6 +12,7 @@
     <None Remove="Assets\EraserIcon.png" />
     <None Remove="Assets\LineIcon.png" />
     <None Remove="Assets\RedoIcon.png" />
+    <None Remove="Assets\SaveIcon.png" />
     <None Remove="Assets\SelecteurIcon.png" />
     <None Remove="Assets\UndoIcon.png" />
   </ItemGroup>
@@ -22,6 +23,7 @@
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\RedoIcon.png" />
+    <Resource Include="Assets\SaveIcon.png" />
     <Resource Include="Assets\SelecteurIcon.png" />
     <Resource Include="Assets\UndoIcon.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
@@ -34,6 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="WriteableBitmapEx" Version="1.6.8" />
   </ItemGroup>
 

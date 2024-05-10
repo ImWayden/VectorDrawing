@@ -7,9 +7,11 @@ using System.Windows;
 
 namespace VectorDrawing.Model
 {
-	public abstract class Nodes
+	//not abstract anymore because it caused probleme for deserializing json 
+	public class Nodes
 	{
 		public Box box;
+		public string Type;
 
 		public List<Nodes> Childs;
 		public Nodes() {

@@ -52,6 +52,12 @@
 				<Button Name="RedoButton" Width="32" Height="32" Background="Transparent" Command="{Binding RedoCommand}">
 					<Image Source="Assets/RedoIcon.png" />
 				</Button>
+				<Button Name="SaveButton" Width="32" Height="32" Background="Transparent" Command="{Binding SaveCommand}">
+					<Image Source="Assets/SaveIcon.png" />
+				</Button>
+				<Button Name="LoadButton" Width="32" Height="32" Background="Transparent" Command="{Binding LoadCommand}">
+					<Image Source="Assets/SaveIcon.png" />
+				</Button>
 			</ToolBar>
 		</Border>
 		<StackPanel Name="ToolBoxPanel" Grid.Row="2" Grid.Column="0" Background="#272727" Grid.ColumnSpan="2" MinWidth="32">
